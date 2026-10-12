@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="form-header">
+            <div class="logo"><span>✦</span></div>
+            <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+            <h1>Let’s get you <em>registered.</em></h1>
+            <p class="subtitle">A few details and you’ll be ready to go.</p>
+        </header>
+
+        <form id="registrationForm" novalidate>
+            <section class="form-section">
+                <h2>Personal Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentId">Student ID</label>
+                        <input type="text" id="studentId" placeholder="e.g. 2026-0001" data-label="Student ID">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" data-label="Full Name">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="you@example.com" data-label="Email Address">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="09123456789" data-label="Phone Number" data-format="philippine-phone">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" data-label="Date of Birth">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" data-label="Gender">
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <small class="error-message"></small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Academic Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="program">Program</label>
+                        <select id="program" data-label="Program">
+                            <option value="">Select program</option>
+                            <option value="BSIT">BS Information Technology</option>
+                            <option value="BSCS">BS Computer Science</option>
+                            <option value="BSIS">BS Information Systems</option>
+                            <option value="BSBA">BS Business Administration</option>
+                            <option value="BSED">Bachelor of Secondary Education</option>
+                        </select>
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearLevel">Year Level</label>
+                        <select id="yearLevel" data-label="Year Level">
+                            <option value="">Select year level</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="2nd Year">2nd Year</option>
+                            <option value="3rd Year">3rd Year</option>
+                            <option value="4th Year">4th Year</option>
+                        </select>
+                        <small class="error-message"></small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Account Security</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="At least 8 characters" data-label="Password">
+                        <small class="error-message"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Re-enter your password" data-label="Confirm Password">
+                        <small class="error-message"></small>
+                    </div>
+                </div>
+                <button type="button" id="togglePassword" class="toggle-password" aria-pressed="false">Show passwords</button>
+            </section>
+
+            <section class="form-section">
+                <h2>Contact Information</h2>
+                <div class="form-group">
+                    <label for="address">Complete Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter your complete address" data-label="Address"></textarea>
+                    <small class="error-message"></small>
+                </div>
+                <div class="agreement">
+                    <input type="checkbox" id="agreement">
+                    <label for="agreement">I confirm that the information I provided is correct.</label>
+                </div>
+                <small class="error-message" id="agreementError"></small>
+            </section>
+
+            <div id="successMessage" class="success-message" role="status" aria-live="polite"></div>
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Register Now</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+        </form>
+        <footer><span class="footer-mark">✦</span> STUDENT REGISTRATION <span>·</span> WS 301</footer>
+    </main>
+</body>
+</html>
